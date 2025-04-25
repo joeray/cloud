@@ -24,7 +24,7 @@ echo "${YELLOW}${BOLD}Starting${RESET}" "${GREEN}${BOLD}Execution${RESET}"
 
 gsutil mb gs://$DEVSHELL_PROJECT_ID
 
-gsutil cp gs://sureskills-ql/challenge-labs/ch01-startup-script/resources-install-web.sh gs://$DEVSHELL_PROJECT_ID
+gsutil cp gs://qwiklabs-gcp-03-cf3246867831/resources-install-web.sh gs://$DEVSHELL_PROJECT_ID
 
 gcloud compute instances create quickgcplab --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --machine-type=n1-standard-1 --tags=http-server --metadata startup-script-url=gs://$DEVSHELL_PROJECT_ID/resources-install-web.sh
 
